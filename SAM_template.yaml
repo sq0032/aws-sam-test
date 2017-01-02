@@ -14,3 +14,14 @@ Resources:
           Properties:
             Path: /TimeResource
             Method: GET
+  HelloWorld:
+    Type: AWS::Serverless::Function
+    Properties:
+      Handler: helloworld.handler
+      Runtime: nodejs4.3
+      Events:
+        MyTimeApi:
+          Type: Api
+          Properties:
+            Path: /helloworld
+            Method: GET
